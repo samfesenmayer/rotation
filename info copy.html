@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>info-Iron Man</title>
+
+    <style>
+
+        body{
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #282c34;
+        }
+
+        .reset{
+            position: absolute;
+            top: 925px;
+            left: 10px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: 2.5px solid rgb(0, 0, 0);
+            padding: 5px 10px;
+            
+        }
+
+        .box{
+        position: relative;
+        padding: 20px;
+        border: 5px solid rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        top: -350px;
+        left: -632px;
+
+        }
+
+        .box2{
+        position: relative;
+        padding: 20px;
+        border: 5px solid rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        top: -350px;
+        left: -432px;
+
+        }
+
+        .ani{
+        font-size: 1.5rem;
+        color: white ;
+        font-weight: bold;
+        position: relative;
+        top: -350px;
+        left: -432px;
+        transform-origin: center;
+        animation: rotate 3s infinite linear,rainbow 3s linear infinite;
+        }
+                 
+        .animated-text {
+        font-size: 2rem;
+        color: white;
+        font-weight: bold;
+        position: relative;
+        top: -350px;
+        animation: slide 3s infinite,rainbow2 3s linear infinite;
+        }
+        
+        @keyframes slide {
+            0% {
+                left: -170px;
+            }
+            50% {
+                left: -165px;
+                transform: translateX(-25px);
+            }
+            100% {
+                left: -160px;
+                transform: translateX(25px);
+            }
+        }
+        
+        @keyframes rotate {
+            0% {
+                transfotm: rotate(0deg);
+            }
+            100% {
+                transform:  rotate(360deg);
+            }
+        }
+
+        @keyframes rainbow {
+        0% { color: red; }
+        20% { color: orange; }
+        40% { color: yellow; }
+        60% { color: green; }
+        80% { color: blue; }
+        100% { color: violet; }
+    }
+
+    @keyframes rainbow2 {
+        0% { color: red; }
+        20% { color: orange; }
+        40% { color: yellow; }
+        60% { color: green; }
+        80% { color: blue; }
+        100% { color: violet; }
+    }
+    </style>
+</head>
+<body>
+
+    <div class="ani"> 
+    rotate...
+    </div>
+
+
+    <div class="animated-text">
+    slide...
+    </div>
+
+        <div class="box">
+
+        </div>
+
+        <div class="box2">
+
+        </div>
+
+
+
+<button type="reset" onclick="window.location.reload();" class="reset">reset</button>
+</body>
+
+</html>
